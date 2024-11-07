@@ -1,5 +1,8 @@
 # temp
 
+deb http://deb.debian.org/debian/ bookworm main non-free-firmware
+deb-src http://deb.debian.org/debian/ bookworm main non-free-firmware
+
 sudo apt install virt-manager qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils ovmf
 -------------------------------------------
 kontrollera virtualisering: ger tillbaka två siffor om ok, troligen: 44
