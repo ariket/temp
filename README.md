@@ -16,6 +16,7 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet intel_iommu=on iommu=pt ipv6.disable=1"
 
 sudo update-grub
 
+sudo apt install git-all
 ----------------------
 
 starta, skriv in i shell:
