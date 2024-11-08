@@ -1,5 +1,7 @@
 # temp
 
+sudo nano /tec/apt/sources.list
+
 deb http://deb.debian.org/debian/ bookworm main non-free-firmware
 deb-src http://deb.debian.org/debian/ bookworm main non-free-firmware
 
