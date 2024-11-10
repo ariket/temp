@@ -1,4 +1,9 @@
 # temp
+
+https://www.reddit.com/r/debian/comments/178bbg2/why_arent_all_packages_from/
+
+
+
 deb http://deb.debian.org/debian/ bookworm main contrib non-free non-free-firmware
 
 deb http://security.debian.org/debian-security/ bookworm-security main contrib non-free non-free-firmware
