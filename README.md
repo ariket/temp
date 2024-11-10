@@ -12,6 +12,11 @@ deb http://deb.debian.org/debian/ bookworm-updates main contrib non-free non-fre
 
 deb http://deb.debian.org/debian bookworm-backports main contrib non-free non-free-firmware
 
+
+sudo nano /etc/apt/sources.list
+
+sudo apt-get update
+
 -------------------------------------------------------------------------------------------------------
 
 https://wiki.debian.org/SourcesList#Example_sources.list
