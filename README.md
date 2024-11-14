@@ -48,6 +48,8 @@ virt-manager
 
 routerVM:
 
+sudo apt-get install firmware-b43-installer
+
 sudo apt install make build-essential
 sudo apt update && sudo apt install -y build-essential dkms
 
