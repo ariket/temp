@@ -234,6 +234,7 @@ hostname -I
 sudo apt install iputils-ping #Installera ping
 
 ----------------------------------------------------------------------------------------------------------
+Skapa ett skript:
 
 touch script.sh
 chmod +x script.sh
@@ -256,6 +257,8 @@ skapa logfil:
 sudo touch /var/log/sys-start.log
 sudo chmod 777 /var/log/sys-start.log
 ------------------------------------------------------------------------------------------------------------
+
+Starta Ubuntu i shell:
 
 /etc/default/grub
 GRUB_CMDLINE_LINUX_DEFAULT=”quiet splash”  remove ”quiet splash” 
