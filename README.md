@@ -257,3 +257,17 @@ sudo touch /var/log/sys-start.log
 sudo chmod 777 /var/log/sys-start.log
 ------------------------------------------------------------------------------------------------------------
 
+/etc/default/grub
+GRUB_CMDLINE_LINUX_DEFAULT=”quiet splash”  remove ”quiet splash” 
+GRUB_CMDLINE_LINUX=”text”
+GRUB_TERMINAL=console
+
+sudo update-grub
+
+There is one further step for Ubuntu versions which use systemd by default. It's necessary to change the default target from "graphical" target to "multi-user" target.
+sudo systemctl set-default multi-user.target
+
+You can always revert to desktop boot later by restoring GRUB config file and running:
+sudo systemctl set-default graphical.target
+
+
