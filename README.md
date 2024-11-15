@@ -233,3 +233,27 @@ hostname -I
 
 sudo apt install iputils-ping #Installera ping
 
+----------------------------------------------------------------------------------------------------------
+
+touch script.sh
+chmod +x script.sh
+nano script.sh
+
+-----------------------------------------
+echo This is myscript.h running
+date >> /var/log/sys-start.log
+sudo virsh nodedev-dettach pci_0000_03_00_0 &>> /var/log/sys-start.log
+sudo virsh start router &>> /var/log/sys-start.log
+echo ---------------------------- >> /var/log/sys-start.log
+----------------------------------------
+
+Save the changes, and run the shell script by typing in
+
+/home/deb/Documents/myscript.sh
+./script.sh
+
+skapa logfil:
+sudo touch /var/log/sys-start.log
+sudo chmod 777 /var/log/sys-start.log
+------------------------------------------------------------------------------------------------------------
+
