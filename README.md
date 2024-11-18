@@ -273,4 +273,89 @@ sudo systemctl set-default multi-user.target
 You can always revert to desktop boot later by restoring GRUB config file and running:
 sudo systemctl set-default graphical.target
 
+-----------------------------------------------------------------------------
+/etc/systemd/network/ 
+
+Virtuell brygga:
+
+[Match] 
+Name=work 
+
+[Network] 
+DHCP=yes 
+
+
+[NetDev] 
+Name=work 
+
+Kind=bridge 
+
+-------------------------------------
+sudo systemctl enable systemd-resolved.service
+sudo systemctl restart systemd-resolved.service
+--------------------------------------------------------
+
+/etc/dnsmasq.conf 
+interface=enp0s8
+dhcp-range=enp0s8,10.0.0.2,10.0.0.100
+dhcp-option=enp0s8,3,10.0.0.1
+dhcp-option=enp0s8,6,1.1.1.1 
+
+-----------------------------------------------------------
+
+#filen nftables :
+
+nano chmod nftables
+
+---------------------------------------------------------
+#!/usr/sbin/nft -f 
+
+flush ruleset 
+
+table inet filter {
+        chain input {
+                type filter hook input priority filter; policy drop;
+
+                #established/related connections:
+                ct state established,related accept
+    
+                # loopback interface
+                iifname lo accept
+    iifname enp0s8 accept
+                # icmp
+                icmp type echo-request accept
+
+
+                #Allow incoming http and https from approved IP range>
+                log prefix "Dropped Input: "
+              
+
+               
+        }
+        chain forward {
+                # Drop everything (assumes this device is not a route>
+                type filter hook forward priority filter; policy accept;
+
+                
+        }
+        chain output {
+                type filter hook output priority filter; policy accept;
+
+        }
+}
+table ip nat {
+  chain prerouting {
+    type nat hook prerouting priority filter; policy accept;
+  }
+  chain postrouting {
+    type nat hook postrouting priority srcnat; policy accept;
+    oifname wlp1s0 masquerade
+  }
+} 
+
+sudo chmod + /etc/nfttables/main.nft
+sudo nft -f /etc/nfttables/main.nft
+sudo systemctl enable nftables
+sudo systemctl start nftables
+
 
