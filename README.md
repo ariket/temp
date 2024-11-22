@@ -358,4 +358,6 @@ sudo nft -f /etc/nfttables/main.nft
 sudo systemctl enable nftables
 sudo systemctl start nftables
 
+https://jonamiki.com/2020/01/29/dnsmasq-failed-to-create-listening-socket-for-port-53-address-already-in-use/
+
 
