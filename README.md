@@ -359,5 +359,7 @@ sudo systemctl enable nftables
 sudo systemctl start nftables
 
 https://jonamiki.com/2020/01/29/dnsmasq-failed-to-create-listening-socket-for-port-53-address-already-in-use/
+---------------------------------------------------------
 
+Invoke-HardeningKitty -Mode HailMary -Log -Report -FileFindingList .\lists\finding_list_0x6d69636b_machine.csv
 
