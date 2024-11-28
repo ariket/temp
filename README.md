@@ -363,3 +363,27 @@ https://jonamiki.com/2020/01/29/dnsmasq-failed-to-create-listening-socket-for-po
 
 Invoke-HardeningKitty -Mode HailMary -Log -Report -FileFindingList .\lists\finding_list_0x6d69636b_machine.csv
 
+---------------------------------------------------------------------------------------------------------------
+
+sudo apt update
+sudo apt upgrade
+sudo apt install netexec, impacket, ceripy, bloodhound(windows AD), ldapsearch(sökningar i AD ldap), hashcat, neo4j, Mimikatz(AD,tex kerberos attacker)
+burpsuite #För webben
+#sqlmap #scanna/breaka databaser
+sudo apt install fzf  #Leta efter saker på maskinen, tex filer eller text
+sudo apt install bat  #variant på cat
+sudo apt install ripgrep #variant på grep, kommando: rg import 	--no-ignore #Tar med gitignore filer -1 #inte case sensitive
+sudo apt install fd-find  #varinat på find, kommando: fdfind temp #söka i datorn
+sudo apt install htop  #aktiviteshanterare
+sudo  tmux  #finns från början  kommando:ctrl-b 1 0, variera mellan två terminaler
+sudo apt install eza #varinat på ls  kommando: eza -1 --icons=auto
+sudo apt install   #
+sudo apt install   #
+sudo apt install   #
+sudo apt install   #
+
+vim .zshrc  #lägga till alias :tex:  alias update="sudo apt update && sudo apt upgrade"  alias c="clear" alias ls="ls -l"
+	    #lägga till egen path: export PATH="$PATH:$Home/bin"  #Skapat ett eget bin i home där jag lägger egna verktyg mm	
+source .zshrc #ladda om filen
+
+sudo neo4j console
