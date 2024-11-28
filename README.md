@@ -365,11 +365,16 @@ Invoke-HardeningKitty -Mode HailMary -Log -Report -FileFindingList .\lists\findi
 
 ---------------------------------------------------------------------------------------------------------------
 
+Kali:
 sudo apt update
 sudo apt upgrade
-sudo apt install netexec, impacket, ceripy, bloodhound(windows AD), ldapsearch(sökningar i AD ldap), hashcat, neo4j, Mimikatz(AD,tex kerberos attacker)
+sudo apt install netexec python3-impacket python3-certipy bloodhound ldap-utils hashcat neo4j mimikatz
+burpsuite fzf bat ripget fd-findhtop eza sqlmap
+bloodhound(windows AD) 
+ldap-utils(ldapsearch sökningar i AD ldap) 
+mimikatz(AD,tex kerberos attacker)
 burpsuite #För webben
-#sqlmap #scanna/breaka databaser
+sqlmap #scanna/breaka databaser
 sudo apt install fzf  #Leta efter saker på maskinen, tex filer eller text
 sudo apt install bat  #variant på cat
 sudo apt install ripgrep #variant på grep, kommando: rg import 	--no-ignore #Tar med gitignore filer -1 #inte case sensitive
@@ -377,13 +382,8 @@ sudo apt install fd-find  #varinat på find, kommando: fdfind temp #söka i dato
 sudo apt install htop  #aktiviteshanterare
 sudo  tmux  #finns från början  kommando:ctrl-b 1 0, variera mellan två terminaler
 sudo apt install eza #varinat på ls  kommando: eza -1 --icons=auto
-sudo apt install   #
-sudo apt install   #
-sudo apt install   #
-sudo apt install   #
+
 
 vim .zshrc  #lägga till alias :tex:  alias update="sudo apt update && sudo apt upgrade"  alias c="clear" alias ls="ls -l"
 	    #lägga till egen path: export PATH="$PATH:$Home/bin"  #Skapat ett eget bin i home där jag lägger egna verktyg mm	
 source .zshrc #ladda om filen
-
-sudo neo4j console
